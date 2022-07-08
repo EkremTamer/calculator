@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+
+    <style>
+        ::placeholder{
+            opacity: 0.7;
+            color: blue;
+        }
+        .numara:hover{
+            background-color: blue;
+            color: whitesmoke;
+        }
+        .islem:hover{
+            background-color: red;
+            color: silver;
+        }
+        input{
+            width: 90%;
+            height: 85%;
+            border: 2px solid gray;
+        }
+        input{
+            outline: 1px solid black;
+            box-shadow: 0 0 3px 3px black;
+        }
+        .numara{
+            width: 100%;
+            height: 100%;
+            font-weight: 900;
+            font-size: 20px;
+            color: blue;
+            background-color: whitesmoke;
+        }
+        table{
+            margin-top: 120px;
+            border: 1px solid black;
+            width: 400px;
+            height: 450px;
+        }
+        .islem{
+            width: 100%;
+            height: 100%;
+            background-color: silver;
+            font-weight: 900;
+            font-size: 20px;
+            color: red;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <form name="kutu">
+        <table class="hesap">
+            <tr>
+                <th colspan="4"><input placeholder="ekotamer hesap makinesi" type="text" name="ekran"></th>
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='1'">1</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='2'">2</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='3'">3</button></td>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value+='+'">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='4'">4</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='5'">5</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='6'">6</button></td>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value+='-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='7'">7</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='8'">8</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='9'">9</button></td>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value+='*'">x</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value=''">C</button></td>
+                <td><button type="button" class="numara" onclick="document.kutu.ekran.value+='0'">0</button></td>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value=eval(document.kutu.ekran.value)">=</button></td>
+                <td><button type="button" class="islem" onclick="document.kutu.ekran.value+='/'">/</button></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
